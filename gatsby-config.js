@@ -3,13 +3,8 @@ module.exports = {
     title: 'Gatsby Default Starter',
   },
   plugins: ['gatsby-plugin-react-helmet',
-    `gatsby-plugin-catch-links`, {
-    resolve: `gatsby-plugin-typography`,
-    options: {
-      pathToConfigModule: `src/utils/typography.js`,
-    },
-  },
-    `gatsby-plugin-typescript`,
+  `gatsby-plugin-catch-links`,
+  `gatsby-plugin-typescript`,
   {
     resolve: `gatsby-source-filesystem`,
     options: {

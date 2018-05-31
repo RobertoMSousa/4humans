@@ -1,0 +1,28 @@
+.topMenuWrapper{
+	grid-area: topMenuWrapper;
+	display: grid;
+	grid-template-areas: 
+	"homeHeader booksHeader coursesHeader blogHeader";
+	grid-template-rows:  1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.topMenuHome{
+	grid-area: homeHeader;
+	background-color: pink;
+}
+
+.topMenuBooks{
+	grid-area: booksHeader;
+	background-color: yellow;
+}
+
+.topMenuCourses{
+	grid-area: coursesHeader;
+	background-color: green;
+}
+
+.topMenuBlog{
+	grid-area: blogHeader;
+	background-color: red;
+}

@@ -9,20 +9,40 @@
 
 .topMenuHome{
 	grid-area: homeHeader;
-	background-color: pink;
 }
 
 .topMenuBooks{
 	grid-area: booksHeader;
-	background-color: yellow;
 }
 
 .topMenuCourses{
 	grid-area: coursesHeader;
-	background-color: green;
 }
 
 .topMenuBlog{
 	grid-area: blogHeader;
-	background-color: red;
 }
+
+.topMenuHome, .topMenuBlog, .topMenuBooks, .topMenuCourses {
+	display: grid;
+	grid-template-areas: 
+	"topMenuIcon"
+	"topMenuText";
+	grid-template-rows:  3fr 1fr;
+	grid-template-columns: 1fr;
+}
+
+.topMenuHome>img, .topMenuBlog>img, .topMenuBooks>img, .topMenuCourses>img {
+	height: 70px;
+	margin: 0px;
+	grid-area: topMenuIcon;
+}
+
+.topMenuHome>span, .topMenuBlog>span, .topMenuBooks>span, .topMenuCourses>span {
+	grid-area: topMenuText;
+	color: white;
+	font-size: 16px;
+    font-weight: 700;
+}
+
+/* "Helvetica Neue", Helvetica, Arial, sans-serif; */

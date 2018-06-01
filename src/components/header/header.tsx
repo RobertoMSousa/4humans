@@ -31,11 +31,6 @@ const Header = ({ siteTitle }) => (
 						polygon: {
 							nb_sides: 5,
 						},
-						image: {
-							height: 100,
-							src: "img/github.svg",
-							width: 100,
-						},
 					},
 					opacity: {
 						value: 0.5,

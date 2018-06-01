@@ -5,6 +5,9 @@
 	"homeHeader booksHeader coursesHeader blogHeader";
 	grid-template-rows:  1fr;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
+	a {
+		text-decoration: none !important;
+	}
 }
 
 .topMenuHome{
@@ -46,4 +49,7 @@
     font-weight: 700;
 }
 
-/* "Helvetica Neue", Helvetica, Arial, sans-serif; */
+.active > span, .active > img {
+	color: var(--yellow);
+	fill: red;
+}

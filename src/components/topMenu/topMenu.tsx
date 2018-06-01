@@ -1,11 +1,7 @@
 import * as React from "react";
-// import Link from "gatsby-link";
-// import { connect } from "react-redux";
-// import { Dispatch } from "redux";
-// import * as PropTypes from "prop-types";
 
 // css
-import "./topMenu.css";
+import "./topMenu.scss";
 
 // static assets
 const homeSvg = require("./home.svg");
@@ -13,41 +9,50 @@ const blogSvg = require("./blog.svg");
 const courseSvg = require("./courses.svg");
 const booksSvg = require("./books.svg");
 
-import { navigateTo } from "gatsby-link"
+import { navigateTo } from "gatsby-link";
+import Link from "gatsby-link";
 
 const TopMenu = () => (
 	<div className="topMenuWrapper">
-		<div
+		<Link
+			exact
+			to="/"
 			className="topMenuHome center"
-			onClick={ () => navigateTo("/")}
+			activeClassName="active"
 		>
 			<img src={homeSvg} className="" alt="" />
 			<span>Home</span>
-		</div>
+		</Link>
 
-		<div
+		<Link
+			exact
+			to="/books"
 			className="topMenuBooks center"
-			onClick={ () => navigateTo("/books")}
+			activeClassName="active"
 		>
 			<img src={booksSvg} className="" alt="" />
 			<span>Books</span>
-		</div>
+		</Link>
 
-		<div
+		<Link
+			to="/courses"
+			activeClassName="active"
 			className="topMenuCourses center"
-			onClick={ () => navigateTo("/courses")}
+			exact
 		>
 			<img src={courseSvg} className="" alt="" />
 			<span>Courses</span>
-		</div>
+		</Link>
 
-		<div
+		<Link
+			exact
+			to="/blog"
 			className="topMenuBlog center"
-			onClick={ () => navigateTo("/blog")}
+			activeClassName="active"
 		>
 			<img src={blogSvg} className="topMenuIcon" alt="" />
 			<span className="topMenuText">Blog</span>
-		</div>
+		</Link>
 	</div>
 );
 

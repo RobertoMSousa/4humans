@@ -5,6 +5,7 @@
     ],
     "rules": {
         "ordered-imports": false,
+        "no-console": false,
         "class-name": true,
         "object-literal-sort-keys": false,
         "comment-format": [

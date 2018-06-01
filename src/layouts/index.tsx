@@ -2,7 +2,7 @@ import * as React from "react";
 import * as PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import Header from "../components/header/header";
-import "./index.css";
+import "./index.scss";
 
 const Layout: any = ({ children, data }) => (
 	<div style={{height: "100vh"} } >

@@ -2,8 +2,10 @@ import * as React from "react";
 import Particles from "react-particles-js";
 import TopMenu from "../topMenu/topMenu";
 
+// static assets
+const logo = require("./company_logo.svg");
 // css
-import "./header.css";
+import "./header.scss";
 
 const Header = ({ siteTitle }) => (
 	<div className="headerWrapper">
@@ -123,7 +125,9 @@ const Header = ({ siteTitle }) => (
 			}}
 		/>
 		<div className="headerIconAndMenu">
-			<div className="headerCompanyLogo"></div>
+			<div className="headerCompanyLogo center">
+				<img src={logo} className="" alt="" />
+			</div>
 			<TopMenu/>
 		</div>
 	</div>

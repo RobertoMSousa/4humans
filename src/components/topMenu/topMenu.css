@@ -30,6 +30,7 @@
 	"topMenuText";
 	grid-template-rows:  3fr 1fr;
 	grid-template-columns: 1fr;
+	cursor: pointer;
 }
 
 .topMenuHome>img, .topMenuBlog>img, .topMenuBooks>img, .topMenuCourses>img {

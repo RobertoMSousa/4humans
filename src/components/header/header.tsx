@@ -19,7 +19,7 @@ const Header = ({ siteTitle }) => (
 							enable: true,
 							value_area: 868.0624057955,
 						},
-						value: 150,
+						value: 80,
 					},
 					color: {
 						value: "#ecd018",

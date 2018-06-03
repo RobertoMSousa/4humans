@@ -5,7 +5,7 @@ import Header from "../components/header/header";
 import "./index.scss";
 
 const Layout: any = ({ children, data }) => (
-	<div style={{height: "100vh"} } className="noSelect">
+	<div className="noSelect">
 		<Helmet
 			title={data.site.siteMetadata.title}
 			meta={[

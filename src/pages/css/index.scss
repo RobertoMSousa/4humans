@@ -15,15 +15,20 @@
     display: grid;
     grid-template-areas: 
                         "indexWhyImage indexWhyText";
-	grid-template-rows:  1fr;
-	grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    @media (max-width: 850px) {
+        margin-top: 20px !important;
+        grid-template-areas: 
+                            "indexWhyImage"
+                            "indexWhyText";
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
 }
 
 .indexWhyImage {
     grid-area: indexWhyImage;
-    img {
-        width: 80%;
-    }
 }
 
 .indexWhyText {
@@ -39,15 +44,19 @@
     display: grid;
     grid-template-areas: 
                         "indexHowText indexHowImage";
-	grid-template-rows:  1fr;
-	grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    @media (max-width: 850px) {
+        grid-template-areas: 
+                            "indexHowImage"
+                            "indexHowText";
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
 }
 
 .indexHowImage {
     grid-area: indexHowImage;
-    img {
-        width: 80%;
-    }
 }
 
 .indexHowText {
@@ -63,15 +72,19 @@
     display: grid;
     grid-template-areas: 
                         "indexWhatImage indexWhatText";
-	grid-template-rows:  1fr;
-	grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    @media (max-width: 850px) {
+        grid-template-areas: 
+                            "indexWhatImage"
+                            "indexWhatText";
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
 }
 
 .indexWhatImage {
     grid-area: indexWhatImage;
-    img {
-        width: 400px;
-    }
 }
 .indexWhatText {
     grid-area: indexWhatText;
@@ -86,8 +99,16 @@
     display: grid;
     grid-template-areas: 
                         "indexCrowdfundingText indexCrowdfundingImage";
-	grid-template-rows:  1fr;
-	grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+
+    @media (max-width: 850px) {
+        grid-template-areas: 
+                            "indexCrowdfundingImage"
+                            "indexCrowdfundingText";
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
 }
 
 .indexCrowdfundingImage {
@@ -107,4 +128,19 @@
 .indexWhy, .indexHow, .indexWhat, .indexCrowdfunding {
     width: 80%;
     margin: 20px auto;
+    @media (max-width: 850px) {
+        margin: 0 auto;
+    }
+}
+
+
+.indexWhyImage, .indexHowImage, .indexWhatImage {
+    img {
+        width: 80%;
+    }
+    @media (max-width: 850px) {
+        img {
+            width: 100%;
+        }
+    }
 }

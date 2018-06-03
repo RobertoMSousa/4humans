@@ -32,7 +32,10 @@ export default function Blog({ data }) {
 
 export const pageQuery = graphql`
 	query BlogQuery {
-		allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+		allMarkdownRemark(
+			sort: { order: DESC, fields: [frontmatter___date] },
+			filter: {fileAbsolutePath: {regex: "/(blog)/.*\\.md$/"}}
+		) {
 			edges {
 				node {
 					excerpt(pruneLength: 250)

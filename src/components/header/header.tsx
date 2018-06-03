@@ -3,7 +3,8 @@ import Particles from "react-particles-js";
 import TopMenu from "../topMenu/topMenu";
 
 // static assets
-const logo = require("./company_logo.svg");
+const logo = require("../../svg/company_logo.svg");
+
 // css
 import "./header.scss";
 

@@ -2,6 +2,9 @@
     position: relative;
 	width: 100%;
 	height: 35vh;
+	@media (max-width: 900px) {
+		height: 25vh;
+	}
 }
 
 .headerIconAndMenu {
@@ -21,4 +24,7 @@
 
 .headerCompanyLogo {
 	grid-area: headerCompanyLogo;
+	@media (max-height: 900px) {
+		display: none;
+	}
 }

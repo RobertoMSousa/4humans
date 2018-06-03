@@ -6,25 +6,105 @@
                         "indexWhy"
                         "indexHow"
                         "indexWhat"
+                        "indexCrowdfunding"
                         "indexFooter";
-	grid-template-rows:  1fr 1fr 1fr 1fr;
-	grid-template-columns: 1fr;
 }
 
 .indexWhy{
     grid-area: indexWhy;
+    display: grid;
+    grid-template-areas: 
+                        "indexWhyImage indexWhyText";
+	grid-template-rows:  1fr;
+	grid-template-columns: 1fr 1fr;
+}
+
+.indexWhyImage {
+    grid-area: indexWhyImage;
+    img {
+        width: 80%;
+    }
+}
+
+.indexWhyText {
+    grid-area: indexWhyText;
+    p {
+        width: 80%;
+        margin: 0 auto
+    }
 }
 
 .indexHow {
     grid-area: indexHow;
+    display: grid;
+    grid-template-areas: 
+                        "indexHowText indexHowImage";
+	grid-template-rows:  1fr;
+	grid-template-columns: 1fr 1fr;
+}
+
+.indexHowImage {
+    grid-area: indexHowImage;
+    img {
+        width: 80%;
+    }
+}
+
+.indexHowText {
+    grid-area: indexHowText;
+    p {
+        width: 80%;
+        margin: 0 auto
+    }
 }
 
 .indexWhat{
     grid-area: indexWhat;
+    display: grid;
+    grid-template-areas: 
+                        "indexWhatImage indexWhatText";
+	grid-template-rows:  1fr;
+	grid-template-columns: 1fr 1fr;
 }
 
-.indexWhat, .indexHow, .indexWhy {
-    height: 150px;
-    width: 95%;
-    margin: 0 auto;
+.indexWhatImage {
+    grid-area: indexWhatImage;
+    img {
+        width: 400px;
+    }
+}
+.indexWhatText {
+    grid-area: indexWhatText;
+    p {
+        width: 80%;
+        margin: 0 auto
+    }
+}
+
+.indexCrowdfunding{
+    grid-area: indexCrowdfunding;
+    display: grid;
+    grid-template-areas: 
+                        "indexCrowdfundingText indexCrowdfundingImage";
+	grid-template-rows:  1fr;
+	grid-template-columns: 1fr 1fr;
+}
+
+.indexCrowdfundingImage {
+    grid-area: indexCrowdfundingImage;
+    img {
+        width: 400px;
+    }
+}
+.indexCrowdfundingText {
+    grid-area: indexCrowdfundingText;
+    p {
+        width: 80%;
+        margin: 0 auto
+    }
+}
+
+.indexWhy, .indexHow, .indexWhat, .indexCrowdfunding {
+    width: 80%;
+    margin: 20px auto;
 }

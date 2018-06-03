@@ -5,6 +5,11 @@
 	@media (max-width: 900px) {
 		height: 25vh;
 	}
+	a {
+		@media (max-width: 900px) {
+			margin-right: 10px;
+		}
+	}
 }
 
 .headerIconAndMenu {
@@ -20,6 +25,9 @@
 						"topMenuWrapper";
 	grid-template-rows:  3fr 1fr;
 	grid-template-columns: 1fr;
+	@media (max-width: 900px) {
+		width: 90%;
+	}
 }
 
 .headerCompanyLogo {

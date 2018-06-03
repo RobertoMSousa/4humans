@@ -6,10 +6,10 @@ import Newsletter from "../newsletter/newsletter";
 import "./footer.scss";
 
 // static
-const facebook = require("./facebook.svg");
-const twitter = require("./twitter.svg");
-const youtube = require("./youtube.svg");
-const discord = require("./discord.svg");
+const facebook = require("../../svg/facebook.svg");
+const twitter = require("../../svg/twitter.svg");
+const youtube = require("../../svg/youtube.svg");
+const discord = require("../../svg/discord.svg");
 
 const Footer = () => (
 	<div className="indexFooter">

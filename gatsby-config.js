@@ -20,6 +20,12 @@ module.exports = {
     }
   },
   {
+    resolve: 'gatsby-plugin-mailchimp',
+    options: {
+      endpoint: 'https://click.us10.list-manage.com/subscribe/post?u=47cb86831854d2e6f4a85d28a&amp;id=16ee7f9bde', // see instructions section below
+    },
+  },
+  {
     resolve: `gatsby-plugin-google-analytics`,
     options: {
       trackingId: 'YOUR_GOOGLE_ANALYTICS_TRACKING_ID',

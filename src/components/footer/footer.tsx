@@ -1,4 +1,5 @@
 import * as React from "react";
+import Link from "gatsby-link";
 
 import Newsletter from "../newsletter/newsletter";
 
@@ -33,9 +34,12 @@ const Footer = () => (
 
 		<div className="indexFooterSupportBitcoin">
 			<span className="indexFooterTitle center">Bitcoin donation</span>
-			<div className="indexFooterSupportBitcoinButton center">
+			<Link
+			exact
+			to="/bitcoin"
+			className="indexFooterSupportBitcoinButton center">
 				<span className="center">Donate</span>
-			</div>
+			</Link>
 		</div>
 
 		<div className="indexFooterNewsletter">

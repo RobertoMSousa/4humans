@@ -1,14 +1,27 @@
 import * as React from "react";
 
+import Newsletter from "../newsletter/newsletter";
+
 // css
 import "./footer.scss";
+
+// static
+const facebook = require("./facebook.svg");
+const twitter = require("./twitter.svg");
+const youtube = require("./youtube.svg");
+const discord = require("./discord.svg");
 
 const Footer = () => (
 	<div className="indexFooter">
 
 		<div className="indexFooterAbout">
-			<span className="indexFooterTitle center">About us</span>
-			<div className="indexFooterAboutBottom" />
+			<span className="indexFooterTitle center">Follow us:</span>
+			<div className="indexFooterAboutBottom center">
+				<img src={facebook} className="indexFooterSocialIcon" alt="" />
+				<img src={twitter} className="indexFooterSocialIcon" alt="" />
+				<img src={youtube} className="indexFooterSocialIcon" alt="" />
+				<img src={discord} className="indexFooterSocialIcon" alt="" />
+			</div>
 		</div>
 
 		<div className="indexFooterSupport">
@@ -20,7 +33,9 @@ const Footer = () => (
 
 		<div className="indexFooterNewsletter">
 			<span className="indexFooterTitle center">Newsletter</span>
-			<div className="indexFooterNewsletterBottom" />
+			<div className="indexFooterNewsletterBottom">
+				<Newsletter/>
+			</div>
 		</div>
 
 	</div>

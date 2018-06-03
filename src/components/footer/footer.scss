@@ -23,6 +23,7 @@
 
 .indexFooterAboutBottom {
     grid-area: indexFooterAboutBottom;
+    display: inline-block;
 }
 
 .indexFooterTitle {
@@ -66,6 +67,13 @@
     grid-template-rows:  1fr 2fr;
     grid-template-columns: 1fr;
 }
+
 .indexFooterNewsletterBottom {
     grid-area: indexFooterNewsletterBottom;
+}
+
+.indexFooterSocialIcon {
+    height: 30px;
+    margin: 10px;
+    cursor: pointer;
 }

@@ -1,14 +1,22 @@
 
 .indexFooter {
     grid-area: indexFooter;
-    height: 150px;
+    padding-bottom: 20px;
     box-shadow: inset 1px 2px 0 rgba(0,0,0,0.08);
     background-color: #f7f7f7;
     display: grid;
 	grid-template-areas: 
                         "indexFooterAbout indexFooterSupport indexFooterNewsletter";
 	grid-template-rows:  1fr;
-	grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    @media (max-width: 850px) {
+        grid-template-areas: 
+        "indexFooterAbout"
+        "indexFooterSupport"
+        "indexFooterNewsletter";
+        grid-template-rows:  1fr 1fr 1fr;
+        grid-template-columns: 1fr;    
+    }
 }
 
 .indexFooterAbout {
@@ -77,4 +85,11 @@
     height: 30px;
     margin: 10px;
     cursor: pointer;
+    @media (max-width: 850px) {
+        height: 50px;
+    }
+}
+
+.indexFooterAbout, .indexFooterSupport, .indexFooterNewsletter {
+    padding-top: 20px;
 }

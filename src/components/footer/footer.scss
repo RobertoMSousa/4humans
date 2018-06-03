@@ -6,13 +6,14 @@
     background-color: #f7f7f7;
     display: grid;
 	grid-template-areas: 
-                        "indexFooterAbout indexFooterSupport indexFooterNewsletter";
+                        "indexFooterAbout indexFooterSupport indexFooterSupportBitcoin indexFooterNewsletter";
 	grid-template-rows:  1fr;
     grid-template-columns: 1fr 1fr 1fr;
     @media (max-width: 850px) {
         grid-template-areas: 
         "indexFooterAbout"
         "indexFooterSupport"
+        "indexFooterSupportBitcoin"
         "indexFooterNewsletter";
         grid-template-rows:  1fr 1fr 1fr;
         grid-template-columns: 1fr;    
@@ -90,6 +91,33 @@
     }
 }
 
-.indexFooterAbout, .indexFooterSupport, .indexFooterNewsletter {
+.indexFooterAbout, .indexFooterSupport, .indexFooterNewsletter, .indexFooterSupportBitcoin {
     padding-top: 20px;
+}
+
+.indexFooterSupportBitcoin {
+    grid-area: indexFooterSupportBitcoin;
+    display: grid;
+	grid-template-areas: 
+                        "indexFooterTitle"
+                        "indexFooterSupportBitcoinButton";
+	grid-template-rows:  1fr 2fr;
+	grid-template-columns: 1fr;
+}
+
+.indexFooterSupportBitcoinButton {
+    grid-area: indexFooterSupportBitcoinButton;
+    width: 250px;
+    background-color: #F38016;
+    text-align: center;
+    border-radius: 55px;
+    border: 2px solid;
+    cursor: pointer;
+    span {
+        color: white;
+        display:inline-block;
+        vertical-align: middle;
+        line-height: 50px;
+        font-size: 1.125rem;
+    }
 }

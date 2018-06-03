@@ -31,6 +31,13 @@ const Footer = () => (
 			</div>
 		</div>
 
+		<div className="indexFooterSupportBitcoin">
+			<span className="indexFooterTitle center">Bitcoin donation</span>
+			<div className="indexFooterSupportBitcoinButton center">
+				<span className="center">Donate</span>
+			</div>
+		</div>
+
 		<div className="indexFooterNewsletter">
 			<span className="indexFooterTitle center">Newsletter</span>
 			<div className="indexFooterNewsletterBottom center">

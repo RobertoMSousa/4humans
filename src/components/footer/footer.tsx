@@ -33,7 +33,7 @@ const Footer = () => (
 
 		<div className="indexFooterNewsletter">
 			<span className="indexFooterTitle center">Newsletter</span>
-			<div className="indexFooterNewsletterBottom">
+			<div className="indexFooterNewsletterBottom center">
 				<Newsletter/>
 			</div>
 		</div>

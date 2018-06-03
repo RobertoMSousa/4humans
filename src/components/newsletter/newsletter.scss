@@ -1,15 +1,19 @@
 .newsletterMainWrapper {
-    width: 80%;
+    // width: 80%;
     text-align: center;
     margin: 0 auto;
     span {
         text-align: center;
+    }
+    form {
+        margin-bottom: 0px;
     }
 }
 
 .newsletterFormWrapper {
     display: flex;
     input {
+        width: 100%;
         font-size: 16px;
         line-height: 1.3;
         padding: 13px 10px;
@@ -19,12 +23,12 @@
         height: auto;
         text-align: center;
         color: #333232;
-        width: 100%;
         cursor: pointer;
         vertical-align: bottom;
         -webkit-appearance: none;
     }
     button {
+        width: 50%;
         height: 48px;
         line-height: 48px;
         background-color: var(--yellow);

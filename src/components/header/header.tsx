@@ -11,7 +11,6 @@ const Header = ({ siteTitle }) => (
 	<div className="headerWrapper">
 		<Particles
 			width= "100%"
-			height="35vh"
 			params={{
 				particles: {
 					number: {

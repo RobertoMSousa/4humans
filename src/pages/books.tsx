@@ -16,7 +16,7 @@ export default function BooksPage({ data }) {
 					return (
 						<Link to={book.frontmatter.path}>
 							<div className="blog-post-preview" key={book.id}>
-								<img src={book.frontmatter.image.childImageSharp.resize.src} className="" alt=""/>
+								<img src={book.frontmatter.imageIndex.childImageSharp.resize.src} className="" alt=""/>
 								<p>{book.frontmatter.title}</p>
 							</div>
 						</Link>
@@ -40,7 +40,7 @@ export const pageQuery = graphql`
 						title
 						date(formatString: "MMMM DD, YYYY")
 						path
-						image {
+						imageIndex {
 							childImageSharp {
 							  resize(width: 800) {
 								src

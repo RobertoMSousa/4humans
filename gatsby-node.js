@@ -8,7 +8,6 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
   return graphql(`{
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
-      limit: 1000
     ) {
       edges {
         node {
@@ -19,6 +18,13 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             date
             path
             title
+            image {
+							childImageSharp {
+							  resize(width: 800) {
+                  src
+							  }
+							}
+						}
           }
         }
       }

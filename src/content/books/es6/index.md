@@ -2,10 +2,10 @@
 path: /es64humans
 date: "2018-06-04T05:00:00.000Z"
 title: "ES6 4 humans"
+image: "./es6-for-humans.png"
 tags:
   - book
   - es6
-image: ui-and-code.png
 excerpt: Who I am, what I do, and why you should care! This post goes into some detail about my general philosophy around blogging, what I hope to accomplish with this blog, and various other details…
 ---
 

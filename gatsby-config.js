@@ -2,9 +2,12 @@ module.exports = {
   siteMetadata: {
     title: '4Humans',
   },
-  plugins: ['gatsby-plugin-react-helmet',
+  plugins: [
+  'gatsby-plugin-react-helmet',
   `gatsby-plugin-catch-links`,
   `gatsby-plugin-typescript`,
+  'gatsby-plugin-sharp',
+  'gatsby-transformer-sharp',
   `gatsby-plugin-sass`,
   {
     resolve: `gatsby-source-filesystem`,

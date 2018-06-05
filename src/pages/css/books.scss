@@ -1,0 +1,17 @@
+.books_main_wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.blog-post-preview {
+    display: inline-block;
+    margin: 20px;
+    img {
+        width: 200px;
+        margin-bottom: 0px;
+    }
+    p {
+        text-align: center;
+        font-size: 1.2em;
+    }
+}

@@ -9,24 +9,18 @@ import "./css/books.scss";
 export default function BooksPage({ data }) {
 	const { edges: books } = data.allMarkdownRemark;
 	return (
-		<div className="blog-posts">
+		<div className="books_main_wrapper">
 			{books
 				.filter((book) => book.node.frontmatter.title.length > 0)
 				.map(({ node: book }) => {
+					console.log("book-->", book); // roberto
 					return (
-						<div className="blog-post-preview" key={book.id}>
-							<h1>
-								<Link to={book.frontmatter.path}>
-									{book.frontmatter.title}
-								</Link>
-							</h1>
-							<h2>
-								{book.frontmatter.date}
-							</h2>
-							<p>
-								{book.excerpt}
-							</p>
-						</div>
+						<Link to={book.frontmatter.path}>
+							<div className="blog-post-preview" key={book.id}>
+								<img src={book.frontmatter.image.childImageSharp.resize.src} className="" alt=""/>
+								<p>{book.frontmatter.title}</p>
+							</div>
+						</Link>
 					);
 				})}
 		</div>
@@ -37,7 +31,7 @@ export const pageQuery = graphql`
 	query BooksQuery {
 		allMarkdownRemark(
 			sort: { order: DESC, fields: [frontmatter___date] },
-			filter: {fileAbsolutePath: {regex: "/(books)/.*\\.md$/"}}
+			filter: {fileAbsolutePath: {regex: "/(books)/.*\\.*$/"}}
 		) {
 			edges {
 				node {
@@ -47,6 +41,13 @@ export const pageQuery = graphql`
 						title
 						date(formatString: "MMMM DD, YYYY")
 						path
+						image {
+							childImageSharp {
+							  resize(width: 800) {
+								src
+							  }
+							}
+						}
 					}
 				}
 			}

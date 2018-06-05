@@ -13,7 +13,6 @@ export default function BooksPage({ data }) {
 			{books
 				.filter((book) => book.node.frontmatter.title.length > 0)
 				.map(({ node: book }) => {
-					console.log("book-->", book); // roberto
 					return (
 						<Link to={book.frontmatter.path}>
 							<div className="blog-post-preview" key={book.id}>

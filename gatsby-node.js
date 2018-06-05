@@ -4,6 +4,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators;
 
   const blogPostTemplate = path.resolve(`src/templates/blog-post.tsx`);
+  const bookTemplate = path.resolve(`src/templates/book.tsx`);
 
   return graphql(`{
     allMarkdownRemark(
@@ -15,10 +16,10 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           html
           id
           frontmatter {
+            title
             date
             path
-            title
-            image {
+            imageIndex {
 							childImageSharp {
 							  resize(width: 800) {
                   src
@@ -35,11 +36,22 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     }
 
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      createPage({
-        path: node.frontmatter.path,
-        component: blogPostTemplate,
-        context: {} // additional data can be passed via context
-      });
+      // console.log('node-->', node.path.match(/^\/book/) ); // roberto
+      // console.log('node-->', node.frontmatter.path.match(/^\/book/) ); // roberto
+      if (node.frontmatter.path.match(/^\/book/)) {
+        createPage({
+          path: node.frontmatter.path,
+          component: bookTemplate,
+          context: {} // additional data can be passed via context
+        });
+      }
+      else {
+        createPage({
+          path: node.frontmatter.path,
+          component: blogPostTemplate,
+          context: {} // additional data can be passed via context
+        });
+      }
     });
   });
 };

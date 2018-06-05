@@ -1,8 +1,8 @@
 ---
-path: /redux4humans
+path: /book/redux4humans
 date: "2018-06-04T05:00:00.000Z"
 title: "Redux for humans"
-image: "./redux-for-humans.png"
+imageIndex: "./redux-for-humans.png"
 tags:
   - book
   - redux

@@ -3,6 +3,10 @@ import addToMailchimp from "gatsby-plugin-mailchimp";
 
 import "./newsletter.scss";
 
+interface IMailAtributes {
+	pathname: string;
+}
+
 class Newsletter extends React.Component <any, any>  {
 
 	constructor(props: any) {
@@ -13,18 +17,18 @@ class Newsletter extends React.Component <any, any>  {
 		};
 	}
 
-	public handleEmailChange = (e) => {
+	public handleEmailChange = (e: any) => {
 		this.setState({ email: e.target.value });
 	}
 
-	public postEmailToMailchimp = async (email, attributes) => {
-		const result = await addToMailchimp(email, attributes);
+	public postEmailToMailchimp = (email: string, attributes: IMailAtributes) => {
+		const result = addToMailchimp(email, attributes);
 		this.setState({
 			status: `success`,
 		});
 	}
 
-	public handleFormSubmit = (e) => {
+	public handleFormSubmit = (e: any) => {
 		e.preventDefault();
 		e.stopPropagation();
 		this.postEmailToMailchimp(this.state.email, {

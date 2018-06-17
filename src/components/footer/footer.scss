@@ -8,14 +8,14 @@
 	grid-template-areas: 
                         "indexFooterAbout indexFooterSupport indexFooterSupportBitcoin indexFooterNewsletter";
 	grid-template-rows:  1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 2fr;
     @media (max-width: 850px) {
         grid-template-areas: 
         "indexFooterAbout"
         "indexFooterSupport"
         "indexFooterSupportBitcoin"
         "indexFooterNewsletter";
-        grid-template-rows:  1fr 1fr 1fr;
+        grid-template-rows:  1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr;    
     }
 }
@@ -79,7 +79,7 @@
 
 .indexFooterNewsletterBottom {
     grid-area: indexFooterNewsletterBottom;
-    width: 80%;
+    width: 98%;
 }
 
 .indexFooterSocialIcon {

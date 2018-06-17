@@ -4,12 +4,14 @@
   "version": "0.0.1",
   "author": "Roberto Sousa",
   "dependencies": {
-    "gatsby": "^1.9.247",
+    "gatsby": "^1.9.166",
     "gatsby-link": "^1.6.40",
     "gatsby-plugin-catch-links": "^1.0.22",
+    "gatsby-plugin-core-js": "^1.0.2",
     "gatsby-plugin-google-analytics": "^1.0.31",
     "gatsby-plugin-mailchimp": "^2.2.3",
     "gatsby-plugin-react-helmet": "^2.0.11",
+    "gatsby-plugin-react-next": "^1.0.11",
     "gatsby-plugin-sass": "^1.0.26",
     "gatsby-plugin-sharp": "^1.6.46",
     "gatsby-plugin-typescript": "^1.4.20",
@@ -19,7 +21,7 @@
     "react-helmet": "^5.2.0",
     "react-particles-js": "^2.2.0",
     "tslint": "^5.10.0",
-    "typescript": "^2.8.4",
+    "typescript": "^2.9.2",
     "typography-theme-grand-view": "^0.15.10"
   },
   "keywords": [
@@ -29,14 +31,15 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "deploy": "surge public/",
     "clean": "rm -r node_modules",
     "format": "prettier --write 'src/**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gatsby build --prefix-paths && s3-deploy './public/**' --cwd './public/' --bucket 4humans  --deleteRemoved --gzip --signatureVersion v4"
   },
   "devDependencies": {
     "@types/graphql": "^0.13.1",
     "@types/react-helmet": "^5.0.6",
-    "prettier": "^1.12.0"
+    "prettier": "^1.12.0",
+    "s3-deploy": "^1.0.0"
   }
 }
